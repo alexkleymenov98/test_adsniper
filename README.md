@@ -16,12 +16,13 @@
         также нужно написать функцию дженерик<[тип данных который хотим получить],[тип данных которые хотим передать(не обязательный)]>  которая будет принемать адрес запроса и возврощать промис
         
         выглядет следующем образом:
-        ```javascript 
+```javascript 
          export const APIGetlistUsers = genFetchData<TAPIlistUsersResp>('/users.logins');
          export const APIGetAllUsersPage = genFetchData<TAPIUsersPage>('/users.page');
          export const APIGetUsersPageById = genFetchData<TAPIUsersPage, TPUsersPageById>(
            '/users.page',
-         );```
+         );
+```
         
         так чтобы в воркере саги можно было вызывать сгенерированные промисы `const res = yeld call(APIGetlistUsers)`    
 
