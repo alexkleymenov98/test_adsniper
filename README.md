@@ -2,7 +2,8 @@
 
     Нужно создать две страници используя https://material-ui.com/ru/, json-server (команда "startServ") для роутинга https://reactrouter.com/web/guides/quick-start :
     1.  Главная страница 
-        ![alt text](https://gyazo.com/ee2a35b4ba32fceaea24659893e49e5d)
+![screenshot](https://i.gyazo.com/ee2a35b4ba32fceaea24659893e49e5d.png)
+
         состоит из меню список юзеров и таблица с данными по юзеру
         
         список юзеров-получаем по запросу /users.logins
@@ -15,11 +16,12 @@
         также нужно написать функцию дженерик<[тип данных который хотим получить],[тип данных которые хотим передать(не обязательный)]>  которая будет принемать адрес запроса и возврощать промис
         
         выглядет следующем образом:
-        `export const APIGetlistUsers = genFetchData<TAPIlistUsersResp>('/users.logins');
+        ```javascript 
+         export const APIGetlistUsers = genFetchData<TAPIlistUsersResp>('/users.logins');
          export const APIGetAllUsersPage = genFetchData<TAPIUsersPage>('/users.page');
          export const APIGetUsersPageById = genFetchData<TAPIUsersPage, TPUsersPageById>(
            '/users.page',
-         );`
+         );```
         
         так чтобы в воркере саги можно было вызывать сгенерированные промисы `const res = yeld call(APIGetlistUsers)`    
 
